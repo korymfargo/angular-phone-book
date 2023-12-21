@@ -3,13 +3,13 @@
     <th mat-header-cell *matHeaderCellDef>No.</th>
     <td mat-cell *matCellDef="let element">{{ element.id }}</td>
   </ng-container>
-  <ng-container matColumnDef="firstName">
+  <ng-container matColumnDef="firstname">
     <th mat-header-cell *matHeaderCellDef>First Name</th>
-    <td mat-cell *matCellDef="let element">{{ element.firstName }}</td>
+    <td mat-cell *matCellDef="let element">{{ element.firstname }}</td>
   </ng-container>
-  <ng-container matColumnDef="lastName">
+  <ng-container matColumnDef="lastname">
     <th mat-header-cell *matHeaderCellDef>Last Name</th>
-    <td mat-cell *matCellDef="let element">{{ element.lastName }}</td>
+    <td mat-cell *matCellDef="let element">{{ element.lastname }}</td>
   </ng-container>
   <ng-container matColumnDef="email">
     <th mat-header-cell *matHeaderCellDef>Email</th>
@@ -31,13 +31,13 @@
     <th mat-header-cell *matHeaderCellDef>Company</th>
     <td mat-cell *matCellDef="let element">{{ element.company }}</td>
   </ng-container>
-  <ng-container matColumnDef="experience">
+  <ng-container matColumnDef="exp">
     <th mat-header-cell *matHeaderCellDef>Experience</th>
-    <td mat-cell *matCellDef="let element">{{ element.experience }}</td>
+    <td mat-cell *matCellDef="let element">{{ element.exp }}</td>
   </ng-container>
-  <ng-container matColumnDef="package">
+  <ng-container matColumnDef="pkg">
     <th mat-header-cell *matHeaderCellDef>Package</th>
-    <td mat-cell *matCellDef="let element">{{ element.package }}</td>
+    <td mat-cell *matCellDef="let element">{{ element.pkg }}</td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

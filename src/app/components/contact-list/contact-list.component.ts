@@ -1,6 +1,6 @@
-import { AfterViewInit, Component, ViewChild, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
-import { MatTableDataSource } from '@angular/material/table';
+import { MatTable, MatTableDataSource } from '@angular/material/table';
 import { Contact } from 'src/app/models/contact.model';
 
 @Component({
@@ -24,9 +24,11 @@ export class ContactListComponent implements AfterViewInit {
   dataSource = new MatTableDataSource<Contact>(ELEMENT_DATA);
   pageSizeOptions = [5, 10, 20];
   @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatTable) contactTable!: MatTable<Contact>;
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
+    this.contactTable.renderRows();
   }
 }
 

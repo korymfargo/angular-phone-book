@@ -44,5 +44,6 @@ export class CreateContactComponent {
 
   onClear(e: MouseEvent) {
     e.preventDefault();
+    this.contactForm.reset();
   }
 }

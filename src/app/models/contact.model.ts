@@ -10,3 +10,5 @@ export interface Contact {
   exp: number;
   pkg: number;
 }
+
+export type ContactForm = Omit<Contact, 'id'>;

@@ -1,10 +1,10 @@
 <div class="phone-book">
-  <mat-tab-group backgroundColor="primary">
+  <mat-tab-group backgroundColor="primary" #phoneBook>
     <mat-tab label="All Contacts">
-      <app-contact-list />
+      <app-contact-list #contactList/>
     </mat-tab>
     <mat-tab label="Add Contacts">
-      <app-create-contact />
+      <app-create-contact (contactCreated)="onContactCreated()"/>
     </mat-tab>
   </mat-tab-group>
 </div>

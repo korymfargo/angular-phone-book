@@ -31,8 +31,13 @@ export class ContactListComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
+    this.fetchAllContacts();
+  }
+
+  fetchAllContacts() {
+    console.log(this.paginator);
     this.contactService.getAllContacts().then((contacts: Array<Contact>) => {
-      this.contactTable.dataSource = contacts;
+      this.dataSource.data = contacts;
       this.contactTable.renderRows();
     })
   }

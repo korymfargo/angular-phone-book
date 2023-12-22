@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Contact } from '../models/contact.model';
+import { Contact, ContactForm } from '../models/contact.model';
 import axios from 'axios';
 
 @Injectable({
@@ -14,7 +14,7 @@ export class ContactService {
     return axios.get<Contact[]>(`${this.apiURL}/contacts`).then(res => res.data);
   }
 
-  createContact(contact: Contact): Promise<Contact> {
+  createContact(contact: ContactForm): Promise<Contact> {
     return axios.post<Contact>(`${this.apiURL}/contacts`, contact).then(res => res.data);
   }
 }
